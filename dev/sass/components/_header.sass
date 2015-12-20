@@ -1,41 +1,66 @@
 nav
-	width: 100%
 	height: 80px
-	.container
-		height: 100%
-		ul.menu-items
+	@media #{$mq-xs}
+		position: fixed
+		left: 0
+		right: 0 
+		top: 0
+		background: #fff
+		z-index: 8
+
+	.mobile-menuitems
+		display: none
+		@media #{$mq-xs}
+			display: block
 			float: right
-			li
-				float: left
-				list-style: none
-				position: relative
-				text-align: center
-			a.item
-				color: #333
-				padding: 19px 15px
-				text-decoration: none
-				line-height: 80px
-				&:hover, &.active:hover
-					color: $primay-color
-				&.active
-					color: $primay-color
-					border-bottom: 3px solid $primay-color
-				i
-					font-size: 22px
-		a.logo
-			font-family: $slabo
+			list-style-type: none
+			padding: 0
+			margin: 0
+			line-height: 80px
+
+		li
+			display: inline-block
+			margin: 0 5px
+
+		.material-icons
 			font-size: 32px
+			vertical-align: -12px
+
+	ul.menu-items
+		float: right
+		@media #{$mq-xs}
+			display: none
+		li
+			float: left
+			list-style: none
+			position: relative
+			text-align: center
+		a.item
 			color: #333
+			padding: 19px 15px
 			text-decoration: none
 			line-height: 80px
-			float: left
-			position: relative
-			width: 200px
-			span
-				font-family: "lato"
-				position: absolute
-				bottom: -23px
-				font-size: 12px
-				left: 55px
-				font-weight: 500
-				color: #a8a8a8
+			&:hover, &.active:hover
+				color: $primay-color
+			&.active
+				color: $primay-color
+				border-bottom: 3px solid $primay-color
+			i
+				font-size: 22px
+	a.logo
+		font-family: $slabo
+		font-size: 32px
+		color: #333
+		text-decoration: none
+		line-height: 80px
+		float: left
+		position: relative
+		width: 200px
+		span
+			font-family: "lato"
+			position: absolute
+			bottom: -23px
+			font-size: 12px
+			left: 55px
+			font-weight: 500
+			color: #a8a8a8

@@ -34,7 +34,7 @@ gulp.task('js', function () {
 // Watch js, sass & html
 gulp.task('watch', function () {
     gulp.watch('dev/js/**/*.js', ["js"]);
-    gulp.watch('dev/sass/*.sass', ["sass"]);
+    gulp.watch('dev/sass/**/*.sass', ["sass"]);
     gulp.watch('dev/html/**/*.html', ["fileinclude"]);
 });
 

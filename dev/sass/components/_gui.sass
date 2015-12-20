@@ -1,0 +1,38 @@
+body 
+	background: #f8f8f8
+	font-family: 'lato'
+
+p
+	margin: 0 0 20px
+
+.btn
+	padding: 10px 20px
+	background: $primay-color
+	color: #fff
+	border-radius: 5px
+	text-decoration: none
+	outline: none
+	white-space: nowrap
+	display: inline-block
+	&:hover
+		color: #fff
+		opacity: .9
+		text-decoration: none
+	i
+		margin-right: 10px
+		font-size: 17px
+
+.btn--facebook
+	@extend .btn
+	background: #4c69ba
+	width: 120px
+.btn--twitter
+	@extend .btn
+	background: #1b95e0
+.btn--google-plus
+	@extend .btn
+	background: #d73d32
+.btn--linkedin
+	@extend .btn
+	background: #008cc9
+	width: 120px

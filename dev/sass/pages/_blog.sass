@@ -1,0 +1,91 @@
+.articles
+	margin-top: 60px
+
+.article
+	margin-bottom: 100px
+
+.article__image
+	width: 100%
+	height: 300px
+	overflow: hidden
+	position: relative
+	display: block
+	img
+		width: 100%
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		transition: all .3s ease
+		&:hover
+			opacity: .9
+
+.article__content
+	width: 80%
+	margin: 40px auto
+	h1
+		font-family: $slabo
+		font-size: 32px
+		a 
+			color: #333
+			text-decoration: none
+			&:hover
+				color: $primay-color
+	p
+		font-size: 18px
+		line-height: 32px
+		font-weight: 300
+		color: #515251
+
+.article__meta
+	list-style: none
+	padding: 0
+	li
+		float: left
+		color: #333
+		opacity: .4
+		margin-right: 15px
+
+		i 
+			font-size: 14px
+			margin-right: 3px
+
+.article__readmore
+	color: $primay-color
+	text-decoration: none
+	font-family: $slabo
+	font-size: 16px
+	&:hover
+		color: #333
+
+.article__container--last
+	margin-top: 100px
+
+/*** Article Detail ***/
+.single-article
+	margin-top: 60px
+	.article__image
+		height: 500px
+		img:hover
+			opacity: 1
+
+.article__tags
+	@extend .article__content
+	.tag
+		color: #A8A8A8
+		padding: 5px 16px
+		border: 1px solid #D6D6D6
+		border-radius: 16px
+		font-weight: 300
+		margin-right: 5px
+		&:hover
+			text-decoration: none
+			border: 1px solid $primay-color
+			color: $primay-color
+
+.article__share
+	@extend .article__content
+	padding: 70px 0
+	border-top: 1px solid #eee
+	border-bottom: 1px solid #eee
+	a
+		margin-right: 5px

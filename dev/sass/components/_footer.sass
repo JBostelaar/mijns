@@ -2,6 +2,9 @@ footer
 	height: 500px 
 	background: #202121
 	color: #f8f8f8
+	padding: 10px 0
+	@media #{$mq-xs}
+		height: auto
 
 .footer__social-media
 	background: #fff
@@ -13,6 +16,8 @@ footer
 		line-height: 80px
 		font-size: 22px
 		padding: 10px
+		@media #{$mq-xs}
+			padding: 10px 8px
 		&:hover
 			text-decoration: none 
 			color: $primay-color
@@ -22,6 +27,8 @@ footer
 			font-size: 30px
 			padding: 20px 30px
 			color: $primay-color
+			@media #{$mq-xs}
+				padding: 20px
 
 .footer__title
 	color: #f8f8f8

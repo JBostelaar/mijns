@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('nav a.search-trigger').click(function(e){
+	$('a.search-trigger').click(function(e){
 		e.preventDefault();
 		$('.search').addClass('active');
 		
@@ -15,11 +15,11 @@ $(document).ready(function(){
 
 	$('.hamburger').click(function(e){
 		e.preventDefault();
-		$('body').toggleClass('mobilemenu-open');
+		$('.navigation').toggleClass('mobilemenu-open');
 	});
 
 	$('.menu__closebutton i').click(function(e){
 		e.preventDefault();
-		$('body').removeClass('mobilemenu-open');
+		$('.navigation').removeClass('mobilemenu-open');
 	});
 });

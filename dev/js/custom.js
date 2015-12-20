@@ -12,4 +12,13 @@ $(document).ready(function(){
 	$('.search__input').blur(function(){
 		$('.search').removeClass('active');
 	});
+
+	$('.hamburger').click(function(e){
+		e.preventDefault();
+		if($('body').hasClass('mobilemenu-open')){
+			$('body').removeClass('mobilemenu-open');
+		} else {
+			$('body').addClass('mobilemenu-open');		
+		}
+	});
 });

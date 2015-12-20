@@ -1,4 +1,4 @@
-nav
+.navigation
 	height: 80px
 	@media #{$mq-xs}
 		position: fixed
@@ -26,27 +26,71 @@ nav
 			font-size: 32px
 			vertical-align: -12px
 
+	nav
+		@media #{$mq-xs}
+			position: fixed
+			background: #f8f8f8
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			z-index: 9
+			opacity: 0
+			transform: scale(1.1)
+			visibility: hidden
+			transition: all .3s ease
+			padding: 0
+
+		.closebutton
+			display: none
+			@media #{$mq-xs}
+				display: block
+				font-size: inherit
+
+			i
+				font-size: 40px
+
 	ul.menu-items
 		float: right
 		@media #{$mq-xs}
-			display: none
+			position: fixed
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			-webkit-transform: translate(-50%, -50%)
+			padding: 0
+			margin: 0
 		li
 			float: left
 			list-style: none
 			position: relative
 			text-align: center
-		a.item
-			color: #333
-			padding: 19px 15px
-			text-decoration: none
-			line-height: 80px
-			&:hover, &.active:hover
-				color: $primay-color
-			&.active
-				color: $primay-color
-				border-bottom: 3px solid $primay-color
-			i
-				font-size: 22px
+			@media #{$mq-xs}
+				float: none
+				width: 100%
+				font-size: 20px 
+				padding: 10px 0
+
+			a.item
+				color: #333
+				padding: 19px 15px
+				text-decoration: none
+				line-height: 80px
+				@media #{$mq-xs}
+					padding: 0
+					line-height: 0
+				&:hover, &.active:hover
+					color: $primay-color
+				&.active
+					color: $primay-color
+					border-bottom: 3px solid $primay-color
+				i
+					font-size: 22px
+
+				&.search-trigger 
+					@media #{$mq-xs}
+						display: none
+
 	a.logo
 		font-family: $slabo
 		font-size: 32px
@@ -64,3 +108,9 @@ nav
 			left: 55px
 			font-weight: 500
 			color: #a8a8a8
+
+.mobilemenu-open .navigation nav
+	opacity: 0.95
+	transform: scale(1)
+	visibility: visible
+

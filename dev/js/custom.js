@@ -15,10 +15,11 @@ $(document).ready(function(){
 
 	$('.hamburger').click(function(e){
 		e.preventDefault();
-		if($('body').hasClass('mobilemenu-open')){
-			$('body').removeClass('mobilemenu-open');
-		} else {
-			$('body').addClass('mobilemenu-open');		
-		}
+		$('body').toggleClass('mobilemenu-open');
+	});
+
+	$('.menu__closebutton i').click(function(e){
+		e.preventDefault();
+		$('body').removeClass('mobilemenu-open');
 	});
 });

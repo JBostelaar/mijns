@@ -76,22 +76,27 @@
 
 			a.item
 				color: #333
-				padding: 19px 15px
+				padding: 3px 0px
+				margin: 0 15px
 				text-decoration: none
 				line-height: 80px
+				border-bottom: 1px solid transparent
+				transition: all .4s ease
 				@media #{$mq-xs}
 					padding: 0
 					line-height: 0
 				&:hover, &.active:hover
 					color: $primay-color
 				&.active
+					border-bottom: 1px solid $primay-color
 					color: $primay-color
-					border-bottom: 3px solid $primay-color
 				i
 					font-size: 22px
 					vertical-align: -6px
 
 				&.search-trigger 
+					&:hover
+						border-bottom: none
 					@media #{$mq-xs}
 						display: none
 
